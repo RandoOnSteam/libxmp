@@ -308,6 +308,8 @@ static int load_module(xmp_context opaque, HIO_HANDLE *h)
 		libxmp_adjust_string(mod->xxs[i].name);
 	}
 
+	libxmp_adjust_string(mod->author);
+
 #ifndef LIBXMP_CORE_PLAYER
 	if (test_result == 0 && load_result == 0)
 		set_md5sum(h, m->md5);

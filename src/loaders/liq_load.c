@@ -362,7 +362,7 @@ static int liq_load(struct module_data *m, HIO_HANDLE *f, const int start)
 
     strncpy(mod->name, (char *)lh.name, 30);
     strncpy(tracker_name, (char *)lh.tracker, 20);
-    /* strncpy(m->author, (char *)lh.author, 20); */
+    strncpy(mod->author, (char *)lh.author, 20);
     tracker_name[20] = 0;
     for (i = 20; i >= 0; i--) {
 	if (tracker_name[i] == 0x20)
